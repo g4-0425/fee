@@ -1,0 +1,34 @@
+1. What do you know about function ? 
+- A function in JavaScript is a block of reusable code that performs a specific task.
+-It runs only when it is called (invoked).
+-processing and transforming data,not changing actual data .
+- parameter is given when function is defined . 
+-argument is given when function is called.
+
+2. what is layout? 
+-layout is the way elements are arranged and positioned on a webpage.
+-It determines where the header, navigation bar, content, images, sidebar, and footer appear.
+- example- Flat (house Layout).
+- Uses - Makes the website easy to read.
+Organizes content neatly . 
+
+3. What do you know about flex layout?
+-A Flex Layout is a CSS layout model that makes it easy to arrange, align,
+  and distribute space among items inside a container.
+- It is ideal when you want items in one dimension—either in a row or a column.
+- Main concepts - flex direction 
+                - justify-content
+                - align-items
+
+4.What is the need of Grid Layout?
+- A Grid Layout is needed when you want to arrange elements in both rows and columns.
+ While Flexbox is designed for one-dimensional layouts (either a row or a column), CSS Grid is designed for two-dimensional layouts.
+ - Advantage-
+- Organizes items in rows and columns
+-Easier complex layouts
+- Responsive design
+
+5.what is the use of Github?
+-Code Storage and Backup
+-Version Control
+-Team Collaboration
