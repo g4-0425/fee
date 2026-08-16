@@ -1,7 +1,7 @@
 console.clear();
 // // Store Name-
-const storeName="Radhe Store "; 
-console.log("\t\tRadhe Store\t\t");
+const storeName="Sumedha Store "; 
+console.log("\t\tSumedha Store\t\t");
 console.log("---------------------------------------");
 // // Inventory - 
 // let item1 = "Mobile";
