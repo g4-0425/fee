@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Sumedha Sharma">
+    <title>Grid Box</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Courgette", Poppins, Inter, sans-serif;
+            font-size: 16px;
+            background-color: antiquewhite;
+            color: lavender;
+        }
+
+        section {
+            padding: 1rem;
+        }
+
+        .box {
+            background-color: darkred;
+            color: white;
+            padding: 1rem;
+        }
+        .gc {
+            display: grid;
+            gap: 1rem;
+            padding: 1rem;
+
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+
+            place-content: center;
+        }
+ @media (min-width: 767px) {
+
+            .gc {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, minmax(0, 1fr));
+
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+
+            #n6 {
+                grid-column: 2 / -1;
+            }
+        }
+
+         @media (min-width: 1824px) {
+
+            .gc {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, minmax(0, 1fr));
+
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+
+            #n6 {
+                grid-column: 2 / -1;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <section class="box" style="height: 10vh;">
+        Header/NavBar
+    </section>
+    <section class="gc" style="height: 80vh; background-color: white;">
+        <main class="box" id="n1">content-1</main>
+        <main class="box" id="n2">content-2</main>
+        <main class="box" id="n3">content-3</main>
+        <main class="box" id="n4">content-4</main>
+        <main class="box" id="n5">content-5</main>
+        <main class="box" id="n6">content-6</main>
+    </section>
+    <section class="box" style="height: 10vh;">
+        Footer
+    </section>
+</body>
+</html>
