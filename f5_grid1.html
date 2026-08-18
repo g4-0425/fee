@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Sumedha Sharma">
+    <title> Flex Box</title>
+ <!-- internal css -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; 
+        /* content box  */
+    }
+    body{
+        min-height: 100dvh;
+        font-family: "Courgette",Poppins,Inter;
+        font-size: 16px;
+        background-color: antiquewhite;
+        color: lavender;
+    }
+    section{
+        padding: 1rem;
+    }
+    /* 1rem - 16 px */
+    .box{
+        background-color:darkred;
+        color: white;
+        padding: 1rem;
+    }
+    /* Flex controller */
+    /* .fc{
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        /* justify-content: flex-start;   (default) justify for x-axis adjustment */
+        /* justify-content: flex-end; */
+        /* justify-content: center;  */
+        /* align-items: flex-start;  (default)*/
+        /* align-items: flex-end; */
+     /* align-items: center; *  Algin for y-axis adjustment  / */
+/* } */
+.gc{
+    display: grid;
+    gap: 0.5rem;
+    /* grid-template-columns: 150px 150px 150px; */
+    /* equal height row boxes as we give repeat it copies the 3 same boxes */
+    /*  can write as 150px 150px and 150px */
+    /* grid-template-rows: repeat(3,150px); */
+    place-content: center;
+    grid-template-columns: repeat(3, minmax(120px, 150px));
+    grid-template-rows: repeat(3, minmax(120px, 150px));
+
+}
+#n1{
+grid-column-start: 1;
+grid-column-end: 3;
+grid-row-start: 1;
+grid-row-end: 2;
+}
+#n2{
+grid-column-start: 3;
+grid-column-end: 4;
+/* can write 3/4 */
+grid-row-start: 1;
+grid-row-end: 3;
+
+
+}
+#n3{
+         grid-column-start:1 ;
+         grid-column-end: 2;
+         grid-row-start: 2;
+         grid-row-end: 4;
+    }
+#n5{
+        grid-column-start:2 ;
+        grid-column-end:4 ;
+        grid-row-start:3 ;
+        grid-row-end:4 ;
+
+
+    }
+
+
+@media (min-width:767px){
+    .gc{
+        /* grid-template-columns: 200px 200px 200px;
+        grid-template-rows: 200px 200px; */
+            grid-template-columns: repeat(3, minmax(150px, 180px));
+        grid-template-rows: repeat(3, minmax(150px, 180px));
+        /* grid-template-columns:repeat(2,minmax(200px,1fr));
+        grid-auto-rows:minmax(180px,auto); */
+    }
+}
+@media (min-width:1824px){
+    .gc{
+        grid-template-columns: repeat(3, minmax(220px, 260px));
+        grid-template-rows: repeat(3, minmax(220px, 260px));
+
+
+            /* grid-template-columns: repeat(3, minmax(200px,260px));
+        grid-template-rows: repeat(3, minmax(200px,260px)); */
+        /* grid-template-columns: repeat(3, minmax(250px, 1fr));
+        grid-template-rows: repeat(3, minmax(250px,1fr)); */
+        /* grid-template-columns:repeat(4,minmax(250px,1fr));
+        grid-auto-rows:minmax(250px,auto); */
+        /* grid-template-columns: repeat(4,250px);
+        grid-template-rows: repeat(2,250px); */
+    }
+
+    /* #n6{
+        /* grid-column: 2/-1; */
+        /* 2 the column it is placed at , -1 fro how much space unknown to cover */
+    } */
+
+/* } */
+
+    </style>
+</head>
+<body>
+<section class="box" style="height:10vh ;"> 
+    Header/NavBar 
+    </section>
+        <section class="box gc" style="height: 80vh; background-color: white;">
+        <main class="box" id="n1">
+            <span style="font-size: 1rem;"> content-1</span> </main>
+        <main class="box" id="n2">content-2</main>
+        <main class="box" id="n3">content-3 </main>
+        <main class="box" id="n4">content-4 </main>
+        <main class="box" id="n5">content-5 </main>
+ </section>    
+    <section 
+    class="box" 
+    style="position: absoulte; bottom:0; left: 0; height: 10vh; width: 100%;"> 
+        Footer
+    </section>
+</body>
+</html> 

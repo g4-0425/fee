@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    margin:0;
+    overflow:hidden;   /* Removes any scrolling/white space */
+}
+
+body{
+    font-family:"Courgette", Poppins, Inter;
+    font-size:20px;
+}
+
+/* Header and Footer */
+.box{
+    background:darkred;
+    color:white;
+    padding:1rem;
+}
+
+header{
+    height:10vh;
+    display:flex;
+    align-items:flex-end;
+}
+
+/* main{
+    height:80vh;
+    display:flex;
+}
+
+.left{
+    flex:1;
+    background:lightsalmon;
+    color:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.right{
+    flex:1;
+    background:lightblue;
+    color:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+} */
+
+ .fc{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+}
+
+.row{
+    display:flex;
+    gap:20px;
+}
+
+.row .box{
+    width:220px;
+    height:180px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+footer{
+    height:10vh;
+    display:flex;
+    align-items:center;
+}
+</style>
+</head>
+
+<body>
+
+<header class="box">
+    Header / NavBar
+</header>
+
+<!-- <main> -->
+    <!-- <section class="left">
+        Left Section
+    </section>
+
+    <section class="right">
+        Right Section
+    </section> -->
+        <section class="box fc" style="height: 80vh; background-color: white;">
+        <main class="box" id="n1">content-1 </main>
+        <main class="box" id="n2">content-2</main>
+        <main class="box" id="n3">content-3 </main>
+        <main class="box" id="n4">content-4 </main>
+        </section>
+<!-- </main> -->
+
+<footer class="box">
+    Footer
+</footer>
+
+</body>
+</html>

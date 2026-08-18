@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flex Layout</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* Header */
+header{
+    height:70px;
+    background:#222;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+/* Main Container */
+.container{
+    flex:1;
+    display:flex;
+}
+
+/* Sidebar */
+aside{
+    width:250px;
+    background:#444;
+    color:white;
+    padding:20px;
+}
+
+aside ul{
+    list-style:none;
+}
+
+aside li{
+    padding:10px 0;
+}
+
+/* Main */
+main{
+    flex:1;
+    background:#f4f4f4;
+    padding:20px;
+}
+
+/* Footer */
+footer{
+    height:60px;
+    background:#222;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Menu Button */
+.menu-btn{
+    display:none;
+    position:absolute;
+    left:20px;
+    font-size:28px;
+    background:none;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .container{
+        display:block;
+    }
+
+    aside{
+        position:fixed;
+        top:0;
+        left:-250px;
+        width:250px;
+        height:100vh;
+        transition:0.3s;
+    }
+
+    aside.show{
+        left:0;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <h2>Header</h2>
+</header>
+
+<div class="container">
+    <aside id="sidebar">
+        <h2>Sidebar</h2>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Gallery</li>
+            <li>Contact</li>
+        </ul>
+    </aside>
+
+    <main>
+        <h1>Main Content</h1>
+        <p>
+            This is the main content area.
+            Resize the browser to see the responsive layout.
+        </p>
+    </main>
+</div>
+
+<footer>
+    <h3>Footer</h3>
+</footer>
+
+<script>
+function toggleMenu(){
+    document.getElementById("sidebar").classList.toggle("show");
+}
+</script>
+
+</body>
+</html>
